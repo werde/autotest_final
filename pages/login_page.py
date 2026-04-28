@@ -1,8 +1,6 @@
 from .base_page import BasePage
 from .locators import LoginPageLocators
 
-from selenium.webdriver import current_url
-
 class LoginPage(BasePage):
     def should_be_login_page(self):
         self.should_be_login_url()
@@ -10,8 +8,7 @@ class LoginPage(BasePage):
         self.should_be_register_form()
 
     def should_be_login_url(self):
-        assert "login" in current_url, "No 'login' substring in current url"
-
+        assert "login" in self.browser.current_url, "No 'login' substring in current url"
 
     def should_be_login_form(self):
         assert self.is_element_present(*LoginPageLocators.LOGIN_FORM), "Login Form not present"

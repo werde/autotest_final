@@ -5,8 +5,6 @@ class MainPageLocators():
     
     
 class LoginPageLocators():
-
-   
     LOGIN_FORM = (By.ID, "login_form")
     LOGIN_EMAIL = (By.ID, "id_login-username")
     LOGIN_PASSWORD = (By.ID, "id_login-password")
