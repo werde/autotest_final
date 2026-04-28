@@ -1,4 +1,6 @@
 from .pages.main_page import MainPage
+from .pages.locators import MainPageLocators
+
 from selenium.webdriver.common.by import By
 
 def go_to_login_page(browser):
