@@ -2,6 +2,8 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+from .pages.main_page import MainPage 
+
 link = "http://selenium1py.pythonanywhere.com/"
 
 def test_guest_should_see_login_link_pass(browser):
@@ -11,3 +13,4 @@ def test_guest_should_see_login_link_pass(browser):
 def test_guest_should_see_login_link_fail(browser):
     browser.get(link)
     browser.find_element(By.CSS_SELECTOR, "#magic_link")
+    
