@@ -11,7 +11,7 @@ class BasePage():
         
     def is_element_present(self, _by, _string):
         try:
-            self.browser.find(_by, _string)
+            self.browser.find_element(_by, _string)
         except NoSuchElementException:
             return False
         
